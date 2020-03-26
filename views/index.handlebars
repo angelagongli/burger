@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Burger <i class="fas fa-hamburger"></i> Logger</h1>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-4">
+            <h3 class="available">Available Burgers</h3>
+            <ul>{{#each burgers}}{{#unless devoured}}
+                <li>
+                    <div>
+                        <span class="burger-span">Burger #{{this.id}} {{this.burger_name}}</span> has <span class="available">not yet been devoured</span>!
+                        <button class="devour-btn" data-id="{{this.id}}">Devour it!</button>
+                    </div>
+                </li>
+            {{/unless}}{{/each}}</ul>
+        </div>
+        <div class="col-sm-4">
+            <img src="/assets/img/burger.jpg" alt="burger img" id="burger-img">
+        </div>
+        <div class="col-sm-4">
+            <h3 class="devoured">Devoured Burgers</h3>
+            <ul>{{#each burgers}}{{#if devoured}}
+                <li>
+                    <div>
+                        <span class="burger-span">Burger #{{this.id}} {{this.burger_name}}</span> has <span class="devoured">already been devoured</span>!
+                    </div>
+                </li>
+            {{/if}}{{/each}}</ul>
+        </div>
+    </div>
+    <div>
+        <h3>What kind of burger would you like to eat?</h3>
+        <form class="burger-form">
+            <input type="text" id="burger-name">
+            <button type="submit" class="burger-btn">Add a Burger</button>
+        </form>
+    </div>
+</div>
