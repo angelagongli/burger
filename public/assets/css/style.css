@@ -1,0 +1,44 @@
+body {
+    text-align: center;
+}
+
+#burger-img {
+    width: 100%;
+}
+
+ul {
+    list-style-type: none;
+    text-align: left;
+}
+
+li {
+    padding: 5px;
+}
+
+button {
+    border: solid 1px black;
+}
+
+.devour-btn:hover {
+    color: red;
+    font-weight: bold;
+}
+
+.burger-btn:hover {
+    color: green;
+    font-style: italic;
+}
+
+.burger-span {
+    font-weight: bold;
+}
+
+.available {
+    font-style: italic;
+    color: green;
+}
+
+.devoured {
+    font-weight: bolder;
+    color: red;
+}
